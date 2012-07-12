@@ -1,19 +1,8 @@
 require "ray"
 
-class TicTacToe
-  def initialize
-    @players = [:X, :O].cycle
-    start_new_turn
-  end
+require_relative "lib/tic_tac_toe"
 
-  attr_reader :message
-
-  def start_new_turn
-    @message = "It's your turn, #{@players.next}"
-  end
-end
-
-class TicTacToe
+module TicTacToe
   class UI < Ray::Game
     def initialize
       super("Tic Tac Toe")
@@ -29,28 +18,35 @@ class TicTacToe
     class MainScene < Ray::Scene
       scene_name :main
 
-      def setup
-        @game = TicTacToe.new
-      end
+      attr_reader :message
 
-      def message
-        @game.message
+      def setup
+        @game = TicTacToe::Game.new
+        update_message
       end
 
       def register
         on :text_entered do |char|
-          @game.start_new_turn
+          input = Ray::TextHelper.convert(char).to_i
+
+          if (1..9).include?(input)
+            @game.move(input)
+            update_message
+          end
         end
       end
-      
+ 
       def render(win)
-        win.draw(text(@game.message, :size => 24, :at => [450,425]))
+        win.draw(text(message, :size => 24, :at => [450,425]))
+      end
+
+      def update_message
+        @message = "It's your turn, #{@game.current_player}"
       end
     end
   end
 end
-=begin
+
 if __FILE__ == $PROGRAM_NAME
   TicTacToe::UI.new.run
 end
-=end
