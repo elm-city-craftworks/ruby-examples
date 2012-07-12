@@ -10,3 +10,8 @@ Have a trivial acceptance test working, but GOOS suggests that acceptance tests
 should not reveal the domain language and details of dependencies. Going
 to add a helper object to deal with this, and get the code more in line with
 the first tests.
+
+12:44:
+
+Added a test helper that makes things look a bit more sane. Now time for a lunch
+break.
