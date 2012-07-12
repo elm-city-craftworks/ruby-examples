@@ -1,16 +1,23 @@
 July 12, 2012
 -------------
 
-12:00: Starting with a 'walking skeleton' acceptance tests, in the style of GOOS.
+12:00 - Starting with a 'walking skeleton' acceptance tests, in the style of GOOS.
 
-12:35: Have a trivial acceptance test working, but GOOS suggests that acceptance tests
+12:35 - Have a trivial acceptance test working, but GOOS suggests that acceptance tests
 should not reveal the domain language and details of dependencies. Going
 to add a helper object to deal with this, and get the code more in line with
 the first tests.
 
-12:44: Added a test helper that makes things look a bit more sane. Now time for a lunch
+12:44 - Added a test helper that makes things look a bit more sane. Now time for a lunch
 break.
 
-13:33: Return from lunch. Doing some basic code reorganization, and then will
+13:33 - Return from lunch. Doing some basic code reorganization, and then will
 begin working more on TicTacToe::Game object. Trying to follow the "Build from
 the inputs to the outputs" approach recommended by GOOS, but it's not that easy.
+
+14:06 - After making some minor refactorings on the basic player switching
+functionality, I found my mind wandering to how I was going to implement win
+condition checking. Wrote it on index cards rather than in code, to avoid
+spiking.
+
+14:14 - Ugly implementation of second integration test, time to quit for today.
