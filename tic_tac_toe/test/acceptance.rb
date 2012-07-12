@@ -1,26 +1,25 @@
 require "minitest/autorun"
+require_relative "../application"
 
 describe "A tic tac toe game" do
-  let(:game) do
-    game = Object.new
+  before do
+    @interface = TicTacToe::UI.new
+    @scene     = @interface.registered_scene(:main)
 
-    def game.messages
-      @messages ||= ["It's your turn, X", "It's your turn, O"]
-    end
-
-    def game.message
-      messages.shift
-    end
-
-    def game.move(position)
-    end
-
-    game
+    @scene.register
+    @scene.setup
   end
 
   it "starts with a move by X" do
-    game.message.must_equal("It's your turn, X")
-    game.move(5)
-    game.message.must_equal("It's your turn, O")
+    @scene.message.must_equal("It's your turn, X")
+
+    @scene.raise_event :text_entered, "5"
+    @interface.event_runner.run
+
+   @scene.message.must_equal("It's your turn, O")
+  end
+
+  after do 
+    @scene.clean_up
   end
 end
