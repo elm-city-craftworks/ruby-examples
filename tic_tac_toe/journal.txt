@@ -23,3 +23,15 @@ spiking.
 14:14 - Ugly implementation of second integration test, time to quit for today.
 NOTE: This should probably raise an exception at the Game level (or something
 similar), and turn it into a message at the UI level. 
+
+July 13
+
+11:23 - Going to sneak in a little work on the UI, will not need tests for that
+because it's just display code for the moment.
+
+12:00 - Ended up implementing a lot of view logic, maybe tests would have been a
+good idea after all? Anyway, I will possibly throw out the code and try again
+from a TDD angle next time I sit down.
+
+Jordan suggests making the UI map to the keyboard numpad, which may not be a bad
+idea.
