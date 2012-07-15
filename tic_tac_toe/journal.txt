@@ -35,3 +35,12 @@ from a TDD angle next time I sit down.
 
 Jordan suggests making the UI map to the keyboard numpad, which may not be a bad
 idea.
+
+July 15
+
+09:40 - Jumped right in and started working on game rules around 9:00am. Trying
+to wrap things up, seem to be driving everything through the acceptance tests,
+and not sure if that's a good thing.
+
+10:00 - It works! Will play test and do a code review tomorrow, possibly
+introducing some cleanup and additional tests then.

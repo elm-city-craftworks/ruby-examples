@@ -32,8 +32,10 @@ module TicTacToe
           input = Ray::TextHelper.convert(char).to_i
 
           if (1..9).include?(input)
-            @grid.update(input, @game.current_player.to_s)
-            @game.move(input)
+            @game.move(input) do |player|
+              @grid.update(input, player.to_s)
+            end
+
             update_message
           end
         end
@@ -46,7 +48,16 @@ module TicTacToe
       end
 
       def update_message
-        @message = "It's your turn, #{@game.current_player}"
+        case @game.status
+        when :playing
+          @message = "It's your turn, #{@game.current_player}"
+        when :draw
+          @message = "It's a draw"
+        when :won_by_x
+          @message = "X won"
+        when :won_by_o
+          @message = "O won"
+        end
       end
     end
 
