@@ -10,7 +10,7 @@ module TicTacToe
       self.status  = :playing
     end
 
-    attr_reader :status
+    attr_reader :status, :winning_line
 
     def move(pos) 
       return unless status == :playing
@@ -31,7 +31,8 @@ module TicTacToe
     private
 
     def update_status
-      if LINES.any? { |line| (line - moves[current_player]).empty? }
+      if line = LINES.find { |line| (line - moves[current_player]).empty? }
+        self.winning_line = line
         self.status = current_player == :X ? :won_by_x : :won_by_o
       elsif moves[:X].count + moves[:O].count == 9
         self.status = :draw
@@ -40,6 +41,6 @@ module TicTacToe
 
 
     attr_accessor :players, :moves
-    attr_writer   :status
+    attr_writer   :status, :winning_line
   end
 end

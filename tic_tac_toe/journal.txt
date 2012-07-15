@@ -44,3 +44,6 @@ and not sure if that's a good thing.
 
 10:00 - It works! Will play test and do a code review tomorrow, possibly
 introducing some cleanup and additional tests then.
+
+10:40 - Hacked in a little GREEN, without tests. Revert and re-implement
+tomorrow.

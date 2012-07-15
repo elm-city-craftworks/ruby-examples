@@ -54,8 +54,10 @@ module TicTacToe
         when :draw
           @message = "It's a draw"
         when :won_by_x
+          @grid.mark_winning_line(@game.winning_line)
           @message = "X won"
         when :won_by_o
+          @grid.mark_winning_line(@game.winning_line)
           @message = "O won"
         end
       end
@@ -76,6 +78,12 @@ module TicTacToe
 
         box.name =  name
         box.shape.color = Ray::Color.blue
+      end
+
+      def mark_winning_line(positions)
+        positions.each do |position|
+          @drawables[position - 1].shape.color = Ray::Color.green
+        end
       end
 
       def draw(win)
