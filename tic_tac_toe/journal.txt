@@ -47,3 +47,8 @@ introducing some cleanup and additional tests then.
 
 10:40 - Hacked in a little GREEN, without tests. Revert and re-implement
 tomorrow.
+
+July 16
+
+14:18 - Spent the last 1.5 hrs trying to do a major refactor, with nothing to
+show for it.
