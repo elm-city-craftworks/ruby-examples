@@ -24,7 +24,8 @@ spiking.
 NOTE: This should probably raise an exception at the Game level (or something
 similar), and turn it into a message at the UI level. 
 
-July 13
+July 13, 2012
+-------------
 
 11:23 - Going to sneak in a little work on the UI, will not need tests for that
 because it's just display code for the moment.
@@ -36,7 +37,8 @@ from a TDD angle next time I sit down.
 Jordan suggests making the UI map to the keyboard numpad, which may not be a bad
 idea.
 
-July 15
+July 15, 2012
+-------------
 
 09:40 - Jumped right in and started working on game rules around 9:00am. Trying
 to wrap things up, seem to be driving everything through the acceptance tests,
@@ -48,10 +50,14 @@ introducing some cleanup and additional tests then.
 10:40 - Hacked in a little GREEN, without tests. Revert and re-implement
 tomorrow.
 
-July 16
+July 16, 2012
+-------------
 
 14:18 - Spent the last 1.5 hrs trying to do a major refactor, with nothing to
 show for it.
 
 14:44 - Have an idea for a state-machine based implementation, but it's hard to
 think of how to refactor to it rather than starting from scratch :-/
+
+15:35 - Worked on even more redesign ideas, this time spiking without tests,
+still not really all that close. Nothing even worth committing.
