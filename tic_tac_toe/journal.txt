@@ -52,3 +52,6 @@ July 16
 
 14:18 - Spent the last 1.5 hrs trying to do a major refactor, with nothing to
 show for it.
+
+14:44 - Have an idea for a state-machine based implementation, but it's hard to
+think of how to refactor to it rather than starting from scratch :-/
